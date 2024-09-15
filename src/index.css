@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7f7f7;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-container {
+  position: relative;
+  width: 300px;
+}
+
+.input input {
+  width: 100%;
+  font-size: 28px;
+  padding: 10px;
+  border: 2px solid #96ffea;
+  border-radius: 8px;
+  height: 50px;
+  outline: none;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  background: transparent;
+  color: #000;
+  position: relative;
+}
+
+.inline-suggestion {
+  position: absolute;
+  padding-left: 17px;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  font-size: 28px;
+  color: rgba(173, 84, 68, 0.674);
+  pointer-events: none;
+  white-space: nowrap;
+  background-color: transparent;
+  z-index: 1;
+}
+
+.input input:focus {
+  border-color: #8e44ad;
+}
+
+.suggestion-box {
+  margin-top: 10px;
+  border: 1px solid #ff96bc;
+  border-radius: 8px;
+  background-color: white;
+  width: 300px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  max-height: 150px;
+  overflow-y: auto;
+  z-index: 1;
+}
+
+.suggestion-item {
+  padding: 10px;
+  font-size: 20px;
+  color: #4d44ad;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.suggestion-item:hover {
+  background-color: #f0e6f7;
+}
